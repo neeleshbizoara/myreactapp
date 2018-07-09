@@ -217,3 +217,11 @@ Ref. https://devcenter.heroku.com/articles/nodejs-support#customizing-the-build-
 
 To do so write following line in servers package.json 
 "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --perfix client && npm run build --prefix client"
+
+---------------------------------------------------------------------------------
+
+Run following command to push your code on heroku "git push heroku master"
+
+To see logs of heroku run "heroku logs" in your terminal.
+
+To open your application run "heroku open" command in your terminal.
