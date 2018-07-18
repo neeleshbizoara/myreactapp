@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import StripeBiller  from './StripeBiller';
+import M from "materialize-css/dist/js/materialize.min.js";
 
 class Header extends Component {
+    componentDidMount(){
+        var elem = document.querySelector(".sidenav");
+        var instance = M.Sidenav.init(elem, {
+            edge: "left",
+            inDuration: 250
+        });
+    }
     renderContent() {
         switch (this.props.auth){
             case null:

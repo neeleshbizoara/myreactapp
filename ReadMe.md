@@ -225,3 +225,53 @@ Run following command to push your code on heroku "git push heroku master"
 To see logs of heroku run "heroku logs" in your terminal.
 
 To open your application run "heroku open" command in your terminal.
+
+------------------------------------------------------------------------------------
+
+To defind Survey model we use subdocument collection (mongoos) as shown is complete solution image.
+
+We used thi because fo mongooos db has limit of 4mb data.
+Video 117 has detail about this.
+
+
+-------------------------------------------------------------------------------------
+
+We have used sendgrid email provider in this project.
+https://sendgrid.com/
+
+Run 'npm install --save sendgrid' in server directory.
+
+------------------------------------------------------------------------------------------
+
+To create servey for we use Redux Form.
+React form need to pass all data to parent component or nee redux to save data and pass to other component. It will become complicated if we follow this approch so we can user Redux form.
+
+Run 'npm install --save redux-form' in client folder.
+
+https://redux-form.com/
+
+-------------------------------------------------------------------------------------
+
+Problem statment: How we can navigate to dashboard after clicking on send survey button. to answer this problemm we are goint to use withROuter() of react-router. 
+
+for more info please checkout this link 
+https://reacttraining.com/react-router/web/api/withRouter
+
+
+------------------------------------------------------------------------------------------
+
+While implementing sendgrid webhook sendgrid will post request with some data. 
+sendgrid can not post requset to our local machine(dev machine) so we have implemented localtunnel to resolve this issue.
+
+Ref: https://localtunnel.github.io/www/
+
+Steps: 
+
+npm install --save localtunnel
+
+add '"webhook": "lt -p 5000 -s lkdjadskfdsakdf"' script in server package.json
+then add "dev": "concurrently \"npm run server\"  \"npm run client\" \"npm run webhook\"", in package.json
+
+-----------------------------------------------------------------------------------------
+
+
