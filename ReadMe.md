@@ -272,6 +272,32 @@ npm install --save localtunnel
 add '"webhook": "lt -p 5000 -s lkdjadskfdsakdf"' script in server package.json
 then add "dev": "concurrently \"npm run server\"  \"npm run client\" \"npm run webhook\"", in package.json
 
+
+https://lkdjadskfdsakdf.localtunnel.me
+
+remote.on('error', function(err) {
+        debugger;
+        if (err.code === 'ECONNREFUSED') {
+          self.emit('error', new Error('connection refused: ' + remote_host + ':' + remote_port + ' (check your firewall settings)'));
+      
+          setTimeout(function() {
+            remote.close();
+            remote.listen(remote_port, remote_host);
+          }, 1000);
+        }
+      });
+
 -----------------------------------------------------------------------------------------
 
+Run in server folder 
+npm install --save lodash path-parser
+
+-----------------------------------------------------------------------------------------
+Mongooes tips 
+DO serach on google
+(187)Use node in terminal then paste all code of index.js then try to write your query 
+
+http://mongoosejs.com/docs/guide.html
+
+http://mongoosejs.com/docs/api.html
 
